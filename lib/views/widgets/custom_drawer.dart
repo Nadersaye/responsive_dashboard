@@ -19,6 +19,7 @@ class CustomDrawer extends StatelessWidget {
         slivers: [
           SliverToBoxAdapter(
             child: Card(
+              elevation: 0,
               color: AppColors.mediumGreyColor,
               child: UserInfoListTile(
                   userInfo: UserInfoModel(
