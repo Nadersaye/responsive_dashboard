@@ -24,6 +24,7 @@ class LatestTransactionListView extends StatelessWidget {
   Widget build(BuildContext context) {
     //use in small list like as 3 ,4
     //in this case we don't need fixed hight
+
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(
@@ -37,8 +38,10 @@ class LatestTransactionListView extends StatelessWidget {
         );
       }).toList()),
     );
+
     //use in big list like because it is lazy builder which loading only items viewed for the user
     //but in this case we need fixed hight
+
     /*SizedBox(
       height: 80,
       child: ListView.builder(
