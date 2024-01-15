@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:responsive_dashboard/utils/app_styles.dart';
 import 'package:responsive_dashboard/views/widgets/custom_background_widget.dart';
-
+import 'package:responsive_dashboard/views/widgets/customer_divider.dart';
+import 'package:responsive_dashboard/views/widgets/customer_form_section.dart';
+import 'custom_quick_invoice_row_buttons.dart';
 import 'latest_transaction_list_view.dart';
 import 'quick_invoice_header.dart';
 
 class QuikInvoiceSection extends StatelessWidget {
   const QuikInvoiceSection({super.key});
-
   @override
   Widget build(BuildContext context) {
     return const CustomBackgroundWidget(
@@ -20,7 +21,11 @@ class QuikInvoiceSection extends StatelessWidget {
             Gap(24),
             Text('Latest Transaction', style: AppStyles.styleMedium16),
             Gap(12),
-            LatestTransactionListView()
+            LatestTransactionListView(),
+            CustomerDivider(),
+            CustomerFormSection(),
+            Gap(24),
+            CustomQuickInvoiceRowButtons()
           ],
         ));
   }
