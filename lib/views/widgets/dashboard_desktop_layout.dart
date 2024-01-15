@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:responsive_dashboard/views/widgets/custom_drawer.dart';
+import 'card_transaction_income_section.dart';
 import 'expenses_invoice.dart';
 
 class DashboardDesktopLayout extends StatelessWidget {
@@ -12,7 +13,9 @@ class DashboardDesktopLayout extends StatelessWidget {
       children: [
         Expanded(child: CustomDrawer()),
         Gap(32),
-        Expanded(flex: 2, child: ExpensesInvoice())
+        Expanded(flex: 2, child: ExpensesInvoice()),
+        Gap(24),
+        Expanded(child: CustomTransactionIncomeSection())
       ],
     );
   }
