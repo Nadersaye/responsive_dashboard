@@ -1,0 +1,1 @@
+enum AmountStates { withdraw, deposit }
