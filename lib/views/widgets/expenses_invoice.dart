@@ -9,11 +9,7 @@ class ExpensesInvoice extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Column(
-      children: [
-        // Expanded(child: AllExpenses()),
-        Gap(24),
-        Expanded(flex: 2, child: QuikInvoiceSection())
-      ],
+      children: [AllExpenses(), Gap(24), QuickInvoiceSection()],
     );
   }
 }
