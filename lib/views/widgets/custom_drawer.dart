@@ -10,9 +10,13 @@ import 'package:responsive_dashboard/views/widgets/user_info_list_tile.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: MediaQuery.sizeOf(context).width <= 800
+          ? MediaQuery.sizeOf(context).width * .7
+          : null,
       color: AppColors.whiteColor,
       padding: const EdgeInsets.fromLTRB(28, 0, 20, 48),
       child: CustomScrollView(
