@@ -22,8 +22,8 @@ class Assets {
   static const String imagesDashboard = "assets/images/dashboard.svg";
 
   /// Assets for imagesDashboardBackground
-  /// assets/images/dashboard_background.png
-  static const String imagesDashboardBackground = "assets/images/dashboard_background.png";
+  /// assets/images/dashboard_background.jpg
+  static const String imagesDashboardBackground = "assets/images/dashboard_background.jpg";
 
   /// Assets for imagesExpenses
   /// assets/images/expenses.svg
