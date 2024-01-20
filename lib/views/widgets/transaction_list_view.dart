@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
 import 'package:responsive_dashboard/models/amout_state.dart';
 import 'package:responsive_dashboard/models/transaction_model.dart';
 import 'package:responsive_dashboard/views/widgets/transaction_list_item.dart';
@@ -25,16 +24,10 @@ class TransactionListView extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    return ListView.separated(
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
-      itemBuilder: (contect, index) {
-        return TransactionListItem(transactionModel: transactions[index]);
-      },
-      separatorBuilder: (BuildContext context, int index) {
-        return const Gap(12);
-      },
-      itemCount: transactions.length,
+    return Column(
+      children: transactions
+          .map((e) => TransactionListItem(transactionModel: e))
+          .toList(),
     );
   }
 }
