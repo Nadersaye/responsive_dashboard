@@ -16,7 +16,7 @@ class CustomTextCard extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text('Customer name', style: AppStyles.styleMedium16),
+          Text('Customer name', style: AppStyles.styleMedium16(context)),
           const Gap(12),
           CustomerTextField(
             item: item,

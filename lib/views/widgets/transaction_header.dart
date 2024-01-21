@@ -12,13 +12,14 @@ class TransactionHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const Text('Transaction History', style: AppStyles.styleSemiBold20),
+        Text('Transaction History', style: AppStyles.styleSemiBold20(context)),
         const Expanded(
             child: SizedBox(
           width: 20,
         )),
         Text('See all',
-            style: AppStyles.styleMedium16.copyWith(color: AppColors.blueColor))
+            style: AppStyles.styleMedium16(context)
+                .copyWith(color: AppColors.blueColor))
       ],
     );
   }

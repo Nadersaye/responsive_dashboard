@@ -35,7 +35,7 @@ class CustomSelectRateBody extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        const Text('Monthly', style: AppStyles.styleMedium16),
+        Text('Monthly', style: AppStyles.styleMedium16(context)),
         const SizedBox(
           width: 18,
         ),

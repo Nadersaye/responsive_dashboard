@@ -12,20 +12,20 @@ class QuickInvoiceSection extends StatelessWidget {
   const QuickInvoiceSection({super.key});
   @override
   Widget build(BuildContext context) {
-    return const CustomBackgroundWidget(
+    return CustomBackgroundWidget(
         padding: 24,
         widget: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            QuickInvoiceHeader(),
-            Gap(24),
-            Text('Latest Transaction', style: AppStyles.styleMedium16),
-            Gap(12),
-            LatestTransactionListView(),
-            CustomDivider(),
-            CustomerFormSection(),
-            Gap(24),
-            CustomQuickInvoiceRowButtons()
+            const QuickInvoiceHeader(),
+            const Gap(24),
+            Text('Latest Transaction', style: AppStyles.styleMedium16(context)),
+            const Gap(12),
+            const LatestTransactionListView(),
+            const CustomDivider(),
+            const CustomerFormSection(),
+            const Gap(24),
+            const CustomQuickInvoiceRowButtons()
           ],
         ));
   }

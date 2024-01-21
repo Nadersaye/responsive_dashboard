@@ -16,8 +16,8 @@ class TransactionSection extends StatelessWidget {
         const TransactionHeader(),
         const Gap(20),
         Text('13 April 2022',
-            style:
-                AppStyles.styleMedium16.copyWith(color: AppColors.greyColor)),
+            style: AppStyles.styleMedium16(context)
+                .copyWith(color: AppColors.greyColor)),
         const Gap(16),
         const TransactionListView()
       ],

@@ -12,10 +12,24 @@ class DashboardDesktopLayout extends StatelessWidget {
     return const Row(
       children: [
         Expanded(child: CustomDrawer()),
-        //Gap(32),
-        //Expanded(flex: 2, child: ExpensesInvoice()),
-        //Gap(24),
-        Expanded(child: CustomTransactionIncomeSection())
+        Gap(32),
+        Expanded(
+          flex: 3,
+          child: CustomScrollView(
+            slivers: [
+              SliverFillRemaining(
+                hasScrollBody: false,
+                child: Row(
+                  children: [
+                    Expanded(flex: 1, child: ExpensesInvoice()),
+                    Gap(24),
+                    Expanded(child: CustomTransactionIncomeSection()),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        )
       ],
     );
   }

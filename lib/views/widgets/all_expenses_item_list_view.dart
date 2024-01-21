@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:responsive_dashboard/models/expenses_item_model.dart';
 import 'package:responsive_dashboard/utils/app_images.dart';
 
@@ -33,27 +34,49 @@ class _AllExpensesItemListViewState extends State<AllExpensesItemListView> {
   @override
   Widget build(BuildContext context) {
     return Row(
-        children: items.asMap().entries.map((e) {
-      int index = e.key;
-      var item = e.value;
-      return Expanded(
-        child: GestureDetector(
-          onTap: () {
-            if (index != selectedIndex) {
+      children: [
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
               setState(() {
-                selectedIndex = index;
+                selectedIndex = 0;
               });
-            }
-          },
-          child: Container(
-            margin: EdgeInsets.symmetric(horizontal: index == 1 ? 12 : 0),
+            },
             child: AllExpensesItem(
-              item: item,
-              isSelected: selectedIndex == index,
+              item: items[0],
+              isSelected: selectedIndex == 0,
             ),
           ),
         ),
-      );
-    }).toList());
+        const Gap(12),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              setState(() {
+                selectedIndex = 1;
+              });
+            },
+            child: AllExpensesItem(
+              item: items[1],
+              isSelected: selectedIndex == 1,
+            ),
+          ),
+        ),
+        const Gap(12),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              setState(() {
+                selectedIndex = 2;
+              });
+            },
+            child: AllExpensesItem(
+              item: items[2],
+              isSelected: selectedIndex == 2,
+            ),
+          ),
+        ),
+      ],
+    );
   }
 }

@@ -44,11 +44,11 @@ class MyCardBody extends StatelessWidget {
           contentPadding: const EdgeInsets.fromLTRB(31, 15, 45, 0),
           title: Text(
             'Name card',
-            style:
-                AppStyles.styleRegular16.copyWith(color: AppColors.whiteColor),
+            style: AppStyles.styleRegular16(context)
+                .copyWith(color: AppColors.whiteColor),
           ),
           subtitle: Text('Syah Bandi',
-              style: AppStyles.styleSemiBold20.copyWith(
+              style: AppStyles.styleSemiBold20(context).copyWith(
                   fontWeight: FontWeight.w500, color: AppColors.whiteColor)),
           trailing: SvgPicture.asset(Assets.imagesGallery),
         ),

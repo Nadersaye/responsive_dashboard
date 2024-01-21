@@ -24,7 +24,7 @@ class CustomQuickInvoiceButton extends StatelessWidget {
         padding: const EdgeInsets.all(20),
         child: Text(
           text,
-          style: AppStyles.styleSemiBold16
+          style: AppStyles.styleSemiBold16(context)
               .copyWith(color: textColor ?? AppColors.whiteColor),
         ),
         onPressed: () {});

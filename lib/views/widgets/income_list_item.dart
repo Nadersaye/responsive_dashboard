@@ -13,10 +13,11 @@ class IncomeListItem extends StatelessWidget {
         radius: 6,
         foregroundColor: income.color,
       ),
-      title: Text(income.title, style: AppStyles.styleSemiBold16),
+      title: Text(income.title, style: AppStyles.styleSemiBold16(context)),
       trailing: Text(
         '${income.value}%',
-        style: AppStyles.styleMedium16.copyWith(color: AppColors.incomeBlue),
+        style: AppStyles.styleMedium16(context)
+            .copyWith(color: AppColors.incomeBlue),
       ),
     );
   }

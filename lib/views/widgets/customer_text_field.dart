@@ -9,12 +9,12 @@ class CustomerTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
-      style: AppStyles.styleRegular16,
+      style: AppStyles.styleRegular16(context),
       cursorColor: AppColors.darkBlueColor,
       decoration: InputDecoration(
           hintText: item.label,
-          hintStyle:
-              AppStyles.styleRegular16.copyWith(color: AppColors.greyColor),
+          hintStyle: AppStyles.styleRegular16(context)
+              .copyWith(color: AppColors.greyColor),
           contentPadding: const EdgeInsets.all(20),
           filled: true,
           fillColor: AppColors.mediumGreyColor,

@@ -10,14 +10,14 @@ class CustomIncomeHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       children: [
-        Text('Income', style: AppStyles.styleSemiBold20),
-        Expanded(
+        Text('Income', style: AppStyles.styleSemiBold20(context)),
+        const Expanded(
             child: SizedBox(
           width: 20,
         )),
-        CustomSelectRate()
+        const CustomSelectRate()
       ],
     );
   }

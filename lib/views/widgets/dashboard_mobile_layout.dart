@@ -10,16 +10,9 @@ class DashboardMobileLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const SingleChildScrollView(
-        child: Padding(
-      padding: EdgeInsets.symmetric(horizontal: 30),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          ExpensesInvoice(),
-          Gap(24),
-          CustomTransactionIncomeSection()
-        ],
-      ),
+        child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [ExpensesInvoice(), Gap(24), CustomTransactionIncomeSection()],
     ));
   }
 }

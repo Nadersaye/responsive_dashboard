@@ -31,15 +31,18 @@ class InActiveAllExpensesItem extends StatelessWidget {
             isSelected: false,
           ),
           const SizedBox(height: 34),
-          Text(item.title, style: AppStyles.styleSemiBold16),
+          Text(item.title, style: AppStyles.styleSemiBold16(context)),
           const Gap(8),
           Text(item.date,
-              style: AppStyles.styleRegular14
+              style: AppStyles.styleRegular14(context)
                   .copyWith(color: AppColors.greyColor)),
           const Gap(16),
-          Text(r"$" "${item.amount.toString()}",
-              style: AppStyles.styleSemiBold24
-                  .copyWith(color: AppColors.blueColor))
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(r"$" "${item.amount.toString()}",
+                style: AppStyles.styleSemiBold24(context)
+                    .copyWith(color: AppColors.blueColor)),
+          )
         ],
       ),
     );

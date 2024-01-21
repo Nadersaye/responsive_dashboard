@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/utils/app_colors.dart';
 import 'package:responsive_dashboard/views/widgets/adaptive_layout.dart';
 import 'package:responsive_dashboard/views/widgets/dashboard_mobile_layout.dart';
+import 'package:responsive_dashboard/views/widgets/dashboard_tablet_layout.dart';
 import 'widgets/custom_drawer.dart';
 import 'widgets/dashboard_desktop_layout.dart';
 
@@ -36,7 +37,7 @@ class _DashboardViewState extends State<DashboardView> {
       backgroundColor: AppColors.mainBackgroundColor,
       body: AdaptiveLayout(
           mobileLayout: (context) => const DashboardMobileLayout(),
-          tabletLayout: (context) => const SizedBox(),
+          tabletLayout: (context) => const DashboardTabletLayout(),
           desktopLayout: (context) => const DashboardDesktopLayout()),
     );
   }

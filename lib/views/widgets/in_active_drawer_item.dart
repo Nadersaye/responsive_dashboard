@@ -11,9 +11,13 @@ class IntActiveDrawerItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
         leading: SvgPicture.asset(drawerItem.image),
-        title: Text(
-          drawerItem.title,
-          style: AppStyles.styleRegular16,
+        title: FittedBox(
+          alignment: AlignmentDirectional.centerStart,
+          fit: BoxFit.scaleDown,
+          child: Text(
+            drawerItem.title,
+            style: AppStyles.styleRegular16(context),
+          ),
         ));
   }
 }

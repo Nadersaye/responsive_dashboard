@@ -14,21 +14,19 @@ class AllExpensesItemHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisSize: MainAxisSize.min,
-      mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        CircleAvatar(
-          radius: 30,
-          backgroundColor: isSelected
-              ? AppColors.whiteColor.withOpacity(0.10000000149011612)
-              : AppColors.mediumGreyColor,
-          child: Padding(
-            padding: const EdgeInsets.all(14),
-            child: SvgPicture.asset(item.image,
-                colorFilter: ColorFilter.mode(
-                    isSelected ? AppColors.whiteColor : AppColors.blueColor,
-                    BlendMode.srcIn)),
+        Flexible(
+          child: CircleAvatar(
+            radius: 30,
+            backgroundColor: isSelected
+                ? AppColors.whiteColor.withOpacity(0.10000000149011612)
+                : AppColors.mediumGreyColor,
+            child: Center(
+              child: SvgPicture.asset(item.image,
+                  colorFilter: ColorFilter.mode(
+                      isSelected ? AppColors.whiteColor : AppColors.blueColor,
+                      BlendMode.srcIn)),
+            ),
           ),
         ),
         const Spacer(),
